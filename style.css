@@ -1,0 +1,8 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+#game {
+    min-height: 200px;
+}
