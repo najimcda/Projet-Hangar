@@ -4,13 +4,11 @@ body{
     display:flex;
     gap:50px;
     padding:20px;
+    background-color:#A020F0;
+    flex-direction: column;
 }
 
-#boites{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
+
 
 .boite{
     width:100px;
@@ -20,6 +18,8 @@ body{
     justify-content:center;
     align-items:center;
     cursor:grab;
+    gap:10px;
+    margin-top:10px;
 }
 
 #b1{background:red;}
@@ -34,4 +34,19 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+}
+.espacement{
+    margin-top:0px;
+
+}
+
+.ecart{
+    
+    margin-left:1000px;
+}
+
+h1{
+    text-align:center;
+    color:brown;
+    
 }
