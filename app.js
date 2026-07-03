@@ -1,4 +1,4 @@
-//Creation de l avariable de selection
+//Creation de la variable de selection
 let choix;
 
 document.querySelectorAll(".boite").forEach(boite=>{
@@ -19,7 +19,8 @@ document.querySelectorAll(".zone").forEach(zone=>{
 
         // Vérification
         if(choix.dataset.zone === zone.id){
-            zone.appendChild(choix);
+         /* zone.appendChild(choix);  */
+            zone.replaceWith(choix);
             alert("Déplacement récu !");
         }else{
             alert("Le poid ne correspond pas à la place !");

@@ -1,28 +1,25 @@
+.header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:10px;
+    background-color:#1E1E1E;
+}
 
 body{
-    font-family: Arial;
-    font-size: 30px ;
+    font-size: 25px;
     font-weight: bold;
     display:flex;
-    gap:50px;
-    padding:20px;
     flex-direction: column;
-    background-color: #1E1E1E;
+    background-color:#242F3D;
     
 }
 
 
 
 .boite{
-    width:100px;
-    height:50px;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    cursor:grab;
-    gap:10px;
-    margin-top:10px;
+    flex: 1;              /* Optionnel : donne la même largeur à toutes les boîtes */
+    max-width: 300px;
 }
 
 #b1{background:red;}
@@ -30,22 +27,21 @@ body{
 #b3{background:blue;}
 
 .zone{
-    width:120px;
-    height:80px;
-    border:2px dashed black;
-    margin-bottom:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    flex: 1;              /* Optionnel : donne la même largeur à toutes les boîtes */
+    max-width: 300px;
+    height: 200px;         /* Hauteur fixe pour les zones */
 }
 .espacement{
-    margin-top:0px;
+    display: flex;        
+    gap: 20px;            
+    justify-content: center;
 
 }
 
 .ecart{
-    
-    margin-left:1000px;
+    display: flex;         
+    gap: 20px;           
+    justify-content: center;
 }
 
 h1{
@@ -55,8 +51,11 @@ h1{
 }
 .container{
     padding-top:-200px;
-    background-image: url('images/fond.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     
+}
+.footer{
+    background-color:#1E1E1E;
+    color:white;
+    text-align:center;
+    padding:10px;
 }
