@@ -1,14 +1,29 @@
-const game = document.querySelector("#game");
+//Creation de l avariable de selection
+let choix;
 
-init();
+document.querySelectorAll(".boite").forEach(boite=>{
+    boite.addEventListener("dragstart",()=>{
+        choix = boite;
+    });
+});
 
-function init() {setBackgroundColor()}
+// Les Zones
+document.querySelectorAll(".zone").forEach(zone=>{
 
-function random(number) {
-  return Math.floor(Math.random() * number);
-}
+    zone.addEventListener("dragover",(e)=>{
+        e.preventDefault();
+    });
 
-function setBackgroundColor() {
-    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-    game.style.backgroundColor = randomColor;
-}
+    zone.addEventListener("drop",(e)=>{
+        e.preventDefault();
+
+        // Vérification
+        if(choix.dataset.zone === zone.id){
+            zone.appendChild(choix);
+            alert("Déplacement récu !");
+        }else{
+            alert("Le poid ne correspond pas à la place !");
+        }
+    });
+
+});
