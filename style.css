@@ -1,11 +1,15 @@
 
 body{
     font-family: Arial;
+    font-size: 30px
+    font-weight: bold;
     display:flex;
     gap:50px;
     padding:20px;
-    background-color:#A020F0;
     flex-direction: column;
+    background-image: url('images/fond.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -47,6 +51,6 @@ body{
 
 h1{
     text-align:center;
-    color:brown;
+    color:white;
     
 }
