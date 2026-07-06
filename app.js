@@ -36,7 +36,7 @@ document.querySelectorAll(".zone").forEach(zone=>{
     
 });
 
-document.querySelector(".Refresh").addEventListener("click",()=>{
+document.querySelector(".monbouton").addEventListener("click",()=>{
     location.reload();
 
 })
