@@ -34,3 +34,6 @@ document.querySelectorAll(".zone").forEach(zone=>{
     });
     
 });
+document.querySelector(".monbouton").addEventListener("click", () => {
+    location.reload();
+});
