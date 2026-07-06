@@ -1,5 +1,7 @@
-//Creation de l avariable de selection
+//Creation de la variable de selection
 let choix;
+let nbElements = 3;
+
 
 document.querySelectorAll(".boite").forEach(boite=>{
     boite.addEventListener("dragstart",()=>{
@@ -19,11 +21,32 @@ document.querySelectorAll(".zone").forEach(zone=>{
 
         // Vérification
         if(choix.dataset.zone === zone.id){
-            zone.appendChild(choix);
+         /* zone.appendChild(choix);  */
+            zone.replaceWith(choix);
             alert("Déplacement récu !");
+            nbElements--;
+            if(nbElements === 0){
+              document.getElementById("titre2").textContent = "Vous avez 0 colis à déplacer !";
+              document.getElementById("titre2").style.color = "red";
+            }
         }else{
             alert("Le poid ne correspond pas à la place !");
         }
     });
+    
+});
 
+document.querySelector(".monbouton").addEventListener("click",()=>{
+    location.reload();
+
+})
+
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key.toLowerCase() === 'r') {
+        event.preventDefault();   
+        location.reload();     
+        alert("Page rechargée !");
+    }
 });

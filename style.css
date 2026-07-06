@@ -1,37 +1,136 @@
-
-body{
-    font-family: Arial;
-    display:flex;
-    gap:50px;
-    padding:20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#boites{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #1E1E1E;
+  /*flex-wrap: wrap; /* important pour mobile */
 }
 
-.boite{
-    width:100px;
-    height:50px;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    cursor:grab;
+/* BODY */
+body {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    background-color: #242F3D;
+    min-height: 100vh;
 }
 
-#b1{background:red;}
-#b2{background:green;}
-#b3{background:blue;}
-
-.zone{
-    width:120px;
-    height:80px;
-    border:2px dashed black;
-    margin-bottom:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* BLOCS */
+.boite {
+    flex: 1;
+    width: 100%;       /* important pour mobile */
+    max-width: 300px;
 }
+
+.zone {
+    flex: 1;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* COULEURS */
+#b1 { background: red;
+color: white;
+ }
+#b2 { background: green;
+color: white;
+}
+#b3 { background: blue;
+color: white;
+}
+
+#z1 { background: red;
+color: white;
+}
+#z2 { background: green; 
+color: white;
+}
+#z3 { background: blue;
+color: white;
+}
+
+/* CONTENEURS FLEX */
+.espacement,
+.ecart {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding: 10px;
+}
+
+/* TITRES */
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 6vw; /* responsive */
+}
+
+h3 {
+    text-align: center;
+    color: green;
+    font-size: 4vw;
+}
+hr {
+    border: none;
+    border-top: 2px dashed white;
+}
+
+/* CONTAINER */
+.container {
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1E1E1E;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .espacement,
+    .ecart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .boite,
+    .zone {
+        max-width: 90%;
+    }
+}
+
+/* 📱 PETITS TÉLÉPHONES */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+}
+
