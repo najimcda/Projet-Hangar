@@ -2,6 +2,7 @@
 let choix;
 let nbElements = 3;
 
+
 document.querySelectorAll(".boite").forEach(boite=>{
     boite.addEventListener("dragstart",()=>{
         choix = boite;
@@ -33,4 +34,19 @@ document.querySelectorAll(".zone").forEach(zone=>{
         }
     });
     
+});
+
+document.querySelector(".Refresh").addEventListener("click",()=>{
+    location.reload();
+
+})
+
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key.toLowerCase() === 'r') {
+        event.preventDefault();   
+        location.reload();     
+        alert("Page rechargée !");
+    }
 });
