@@ -1,4 +1,4 @@
-# Coucou 👋
+# Hello! 👋
 
 
-Direction le wiki pour voir les projets!!!
+Nous Sommes ravis de votre visite sur notre SITE WEB "TRICOLIS" !!!
